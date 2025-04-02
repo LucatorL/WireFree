@@ -1,0 +1,361 @@
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 120%;
+  height: 150%;
+  background: radial-gradient(circle at top right, rgba(255,45,85,0.05), transparent 60%),
+              radial-gradient(circle at bottom left, rgba(0,113,227,0.05), transparent 60%);
+  z-index: 0;
+  animation: gradient-shift 15s ease infinite alternate;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  max-width: 800px;
+  animation: fadeUp 1s ease;
+  background: linear-gradient(90deg, var(--primary), var(--accent-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p {
+  font-size: 28px;
+  color: var(--gray);
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeUp 1s ease 0.2s both;
+}
+.hero-image-placeholder {
+  margin-top: 60px;
+  font-style: italic;
+  color: #999;
+  animation: fadeUp 1s ease 0.4s both;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 150px 40px;
+  background-color: #f8f8f8;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+.hero-image-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.5));
+  z-index: 1;
+}
+
+/* Problem Statement Section */
+/* .problem ya no necesita background-color aquí, se maneja con .dark-section en styles.css */
+.problem .section-title {
+  background: linear-gradient(90deg, var(--primary), var(--accent-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* .problem .section-subtitle se maneja con .dark-section en styles.css */
+
+.problem-visual {
+  display: flex;
+  justify-content: center; /* Centrar las tarjetas */
+  margin-top: 80px;
+  gap: 30px;
+  flex-wrap: wrap; /* Permitir que las tarjetas pasen a la siguiente línea */
+}
+.problem-card {
+  flex: 0 1 350px; /* Base de 350px, permite encoger, no crecer más allá de 350px */
+  max-width: 350px; /* Asegurar un ancho máximo */
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+  background: rgba(255, 255, 255, 0.05); /* Fondo dentro de la tarjeta */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 40px 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  display: flex; /* Usar flex para controlar el contenido interno */
+  flex-direction: column; /* Alinear contenido verticalmente */
+  color: rgba(255, 255, 255, 0.7); /* Color de texto base para la tarjeta */
+}
+.problem-card::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+.problem-card:hover::after {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.problem-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+.problem-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-size: 32px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  color: white; /* Asegurar que los iconos sean blancos */
+}
+/* Iconos existentes */
+.problem-card:nth-child(1) .problem-icon {
+  background: linear-gradient(135deg, var(--accent-pink), #ff6b8b);
+  box-shadow: 0 10px 20px rgba(255, 45, 85, 0.3);
+}
+.problem-card:nth-child(2) .problem-icon {
+  background: linear-gradient(135deg, var(--primary), #65B2FF);
+  box-shadow: 0 10px 20px rgba(0, 113, 227, 0.3);
+}
+.problem-card:nth-child(3) .problem-icon {
+  background: linear-gradient(135deg, var(--accent-green), #8BF5A8);
+  box-shadow: 0 10px 20px rgba(52, 199, 89, 0.3);
+}
+/* Iconos nuevos */
+.problem-card:nth-child(4) .problem-icon { /* Soluciones complejas */
+  background: linear-gradient(135deg, #f7b733, #fc4a1a); /* Naranja */
+  box-shadow: 0 10px 20px rgba(252, 74, 26, 0.3);
+}
+.problem-card:nth-child(5) .problem-icon { /* Libertad escasa */
+  background: linear-gradient(135deg, #8e44ad, #c0392b); /* Morado/Rojo oscuro */
+  box-shadow: 0 10px 20px rgba(142, 68, 173, 0.3);
+}
+.problem-card:nth-child(6) .problem-icon { /* Acceso restringido */
+  background: linear-gradient(135deg, #e74c3c, #c0392b); /* Rojo */
+  box-shadow: 0 10px 20px rgba(192, 57, 43, 0.3);
+}
+.problem-card:nth-child(7) .problem-icon { /* Gasto en duplicidad */
+  background: linear-gradient(135deg, #16a085, #1abc9c); /* Verde azulado */
+  box-shadow: 0 10px 20px rgba(22, 160, 133, 0.3);
+}
+
+.problem-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  flex-shrink: 0;
+  color: white; /* Títulos blancos en tarjetas oscuras */
+}
+.problem-card p {
+  font-size: 16px;
+  /* color ya está definido en .problem-card */
+  margin-bottom: 25px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-grow: 1;
+}
+.problem-image-placeholder {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: auto;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  flex-shrink: 0;
+}
+
+
+/* Solution Section */
+.solution {
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+.solution::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -30%;
+  width: 80%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(0, 113, 227, 0.04), transparent 70%);
+  z-index: 0;
+  border-radius: 50%;
+}
+.solution-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  margin-top: 80px;
+  position: relative;
+  z-index: 1;
+}
+.solution-text {
+  flex: 1;
+  opacity: 1;
+  transition: all 0.8s ease;
+}
+.solution-image {
+  flex: 1;
+  opacity: 1;
+  transition: all 0.8s ease;
+  position: relative;
+}
+.solution h2 {
+  font-size: 38px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, var(--primary), var(--accent-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.solution p {
+  font-size: 20px;
+  color: var(--gray); /* Color por defecto para secciones claras */
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Estilos específicos para la sección "Acceso total, sin limitaciones" */
+.wirefree-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+.emisor-box {
+  background: linear-gradient(135deg, var(--primary), #65B2FF);
+  color: white;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  width: 220px;
+  margin-bottom: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 113, 227, 0.2);
+}
+.emisor-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 113, 227, 0.3);
+}
+.emisor-box.active {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 113, 227, 0.3);
+}
+.connection-line {
+  width: 4px;
+  height: 50px;
+  background-color: #0071e3;
+  margin: 0 auto;
+}
+.options-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+}
+.options-container::before {
+  content: '🤔';
+  position: absolute;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.receptor-box, .app-box {
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  width: 180px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  color: white;
+}
+.receptor-box {
+  background: linear-gradient(135deg, var(--accent-green), #8BF5A8);
+  box-shadow: 0 10px 20px rgba(52, 199, 89, 0.2);
+}
+.app-box {
+  background: linear-gradient(135deg, var(--accent-pink), #ff6b8b);
+  box-shadow: 0 10px 20px rgba(255, 45, 85, 0.2);
+}
+.receptor-box:hover, .app-box:hover {
+  transform: translateY(-5px);
+}
+.receptor-box.active, .app-box.active {
+  transform: translateY(-5px);
+}
+.receptor-box:hover {
+  box-shadow: 0 15px 30px rgba(52, 199, 89, 0.3);
+}
+.receptor-box.active {
+  box-shadow: 0 15px 30px rgba(52, 199, 89, 0.3);
+}
+.app-box:hover {
+  box-shadow: 0 15px 30px rgba(255, 45, 85, 0.3);
+}
+.app-box.active {
+  box-shadow: 0 15px 30px rgba(255, 45, 85, 0.3);
+}
+.hand-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0051a3;
+  top: -10px;
+  right: -10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.device-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
