@@ -1,6 +1,6 @@
 # WireFree - Tu equipo. Tus reglas. En cualquier lugar.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-Visítalo-blue)](https://wirefree.netlify.app/)
+[![Web Demo](https://img.shields.io/badge/Live-Demo-Visítalo-blue)](https://wirefree.netlify.app/)
 
 ¡Bienvenido a WireFree! Este repositorio contiene el código fuente de la web informativa que presenta WireFree, una innovadora solución hardware para acceder a tu equipo principal desde cualquier dispositivo con puerto HDMI, sin complicaciones.
 
@@ -28,28 +28,4 @@ Explora la propuesta visual de WireFree en nuestra web informativa:
 ## Captura de Pantalla
 
 *Aquí puedes agregar una imagen representativa de la landing page o del concepto WireFree.*  
-![WireFree Demo](https://via.placeholder.com/1200x600.png?text=WireFree:+Tu+equipo.+Tus+reglas.+En+cualquier+lugar.)
-
-## Tecnologías Utilizadas
-
-La página se ha desarrollado utilizando:
-- HTML5
-- CSS3
-- (Posible uso de JavaScript, según sea necesario)
-- Despliegue automático con Netlify
-
-## Cómo Contribuir
-
-Si deseas mejorar o colaborar con el proyecto, sigue estos pasos:
-
-```bash
-# Clona el repositorio
-git clone https://github.com/tu_usuario/tu_repositorio.git
-
-# Entra en el directorio del proyecto
-cd tu_repositorio
-
-# Crea una rama para tu cambio
-git checkout -b mejora-readme
-
-# Haz tus modificaciones y envía un pull request.
+![WireFree Web](https://via.placeholder.com/1200x600.png?text=WireFree:+Tu+equipo.+Tus+reglas.+En+cualquier+lugar.)
