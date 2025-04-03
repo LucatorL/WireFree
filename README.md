@@ -22,5 +22,7 @@ Explora la propuesta visual de WireFree en nuestra web informativa:
 [<img src="https://img.shields.io/badge/Ver%20WireFree-Netlify-00C7B7?logo=netlify&logoColor=white" alt="Ver WireFree en Netlify" />](https://wirefree.netlify.app/)
 
 ## Captura de Pantalla
-*Aquí puedes agregar una imagen representativa de la landing page o del concepto WireFree.*  
-![WireFree Web](https://via.placeholder.com/1200x600.png?text=WireFree:+Tu+equipo.+Tus+reglas.+En+cualquier+lugar.)
+![image](https://github.com/user-attachments/assets/69dca943-3c92-48bf-9b7a-f86e7f78ffcc)
+
+
+![Adobe Express - file](https://github.com/user-attachments/assets/8cc11abb-cdac-4cec-bd02-24b2663d423a)
