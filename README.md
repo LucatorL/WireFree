@@ -29,9 +29,17 @@ Explora la propuesta visual de WireFree en nuestra web informativa:
 
 ![image](https://github.com/user-attachments/assets/69dca943-3c92-48bf-9b7a-f86e7f78ffcc)
 
+![image-removebg-preview](https://github.com/user-attachments/assets/8222fd67-36ff-4cc1-97ec-6d64878336f9)
+
+![image-removebg-preview (1)](https://github.com/user-attachments/assets/0b760b51-b974-4fef-9386-57b1d58078d4)
+
+![image](https://github.com/user-attachments/assets/3404e84c-63d1-45f5-8f70-50bae3d2a956)
+
+
 ![Captura_de_pantalla_2025-04-20_140348-removebg-preview](https://github.com/user-attachments/assets/39963ce1-ffca-4fcf-bda6-e09d3496aa7a)
 
 ![image](https://github.com/user-attachments/assets/29a4cc34-5066-45b8-9033-3526bac7cc34)
+
 
 
 
