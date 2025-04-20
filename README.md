@@ -1,3 +1,6 @@
+![Captura_de_pantalla_2025-04-20_135450-removebg-preview](https://github.com/user-attachments/assets/256a3bd9-ff9b-4844-9026-ad89d4d7ee68)
+
+
 # WireFree - Tu equipo. Tus reglas. En cualquier lugar.
 [![Web WireFree](https://img.shields.io/badge/Demo-Web-blue?logo=googlechrome)](https://wirefree.netlify.app/)
 
@@ -22,11 +25,13 @@ Explora la propuesta visual de WireFree en nuestra web informativa:
 [<img src="https://img.shields.io/badge/Ver%20WireFree-Netlify-00C7B7?logo=netlify&logoColor=white" alt="Ver WireFree en Netlify" />](https://wirefree.netlify.app/)
 
 ## Captura de Pantalla
-![image](https://github.com/user-attachments/assets/69dca943-3c92-48bf-9b7a-f86e7f78ffcc)
-
-
 ![Adobe Express - file](https://github.com/user-attachments/assets/8cc11abb-cdac-4cec-bd02-24b2663d423a)
 
+![image](https://github.com/user-attachments/assets/69dca943-3c92-48bf-9b7a-f86e7f78ffcc)
 
+![Captura_de_pantalla_2025-04-20_140348-removebg-preview](https://github.com/user-attachments/assets/39963ce1-ffca-4fcf-bda6-e09d3496aa7a)
 
 ![image](https://github.com/user-attachments/assets/29a4cc34-5066-45b8-9033-3526bac7cc34)
+
+
+
