@@ -33,7 +33,7 @@ Explora la propuesta visual de WireFree en nuestra web informativa:
 
 ![image-removebg-preview (1)](https://github.com/user-attachments/assets/0b760b51-b974-4fef-9386-57b1d58078d4)
 
-![image](https://github.com/user-attachments/assets/3404e84c-63d1-45f5-8f70-50bae3d2a956)
+![image-removebg-preview (2)](https://github.com/user-attachments/assets/29632116-2e4c-46c4-aaa6-f0b601c1e6fd)
 
 
 ![Captura_de_pantalla_2025-04-20_140348-removebg-preview](https://github.com/user-attachments/assets/39963ce1-ffca-4fcf-bda6-e09d3496aa7a)
