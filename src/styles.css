@@ -1,0 +1,482 @@
+:root {
+  --primary: #0071e3;
+  --primary-dark: #0051a3;
+  --secondary: #2ecc71;
+  --dark: #1d1d1f; /* Color principal oscuro */
+  --light: #f5f5f7; /* Color principal claro */
+  --gray: #86868b;
+  --light-gray: #d2d2d7; /* Gris claro para texto en modo oscuro */
+  --accent-pink: #FF2D55;
+  --accent-orange: #FF9500;
+  --accent-green: #34C759;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background-color: var(--light); /* Fondo claro por defecto */
+  color: var(--dark); /* Texto oscuro por defecto */
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  /* Estilos base (modo claro) */
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 16px 0;
+  position: fixed;
+  width: 100%;
+  top: 0; /* Asegurar que esté arriba */
+  z-index: 1000;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Transición suave */
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  transition: color 0.5s ease; /* Transición */
+}
+.logo span {
+  background: linear-gradient(90deg, var(--primary), var(--accent-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* No se aplica transición directa al gradiente, el color del logo padre lo hará */
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+.nav-links a {
+  color: var(--dark); /* Color claro por defecto */
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.5s ease; /* Transición */
+}
+.nav-links a:hover {
+  color: var(--primary); /* Hover claro */
+}
+.cta-button {
+  background-color: var(--primary); /* CTA claro */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 980px;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  transition: all 0.3s ease, background-color 0.5s ease, color 0.5s ease; /* Transición */
+  border: none;
+  cursor: pointer;
+}
+.cta-button:hover {
+  background-color: var(--primary-dark); /* Hover CTA claro */
+  transform: scale(1.05);
+}
+
+/* Estilos Header Modo Oscuro */
+header.header-dark {
+  background-color: rgba(29, 29, 31, 0.8); /* Fondo oscuro translúcido */
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1); /* Sombra clara */
+}
+header.header-dark .logo span {
+  background: linear-gradient(90deg, #eee, var(--light-gray)); /* Gradiente claro para logo */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header.header-dark .nav-links a {
+  color: var(--light-gray); /* Texto claro */
+}
+header.header-dark .nav-links a:hover {
+  color: white; /* Hover claro */
+}
+header.header-dark .cta-button {
+  background-color: white; /* Fondo blanco para CTA */
+  color: var(--dark); /* Texto oscuro para CTA */
+}
+header.header-dark .cta-button:hover {
+  background-color: var(--light-gray); /* Hover CTA oscuro */
+  color: var(--dark);
+}
+
+
+/* Sections General */
+section {
+  padding: 130px 0;
+  position: relative;
+  overflow: hidden;
+}
+.section-title {
+  font-size: 56px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, var(--primary), var(--accent-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+}
+.section-subtitle {
+  font-size: 26px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--gray);
+  margin-bottom: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Animaciones */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes gradient-shift {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(5deg) scale(1.1); }
+}
+
+/* Aviso Desarrollo (sin cambios) */
+.development-notice {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.blurred {
+  filter: blur(5px);
+  transition: filter 0.5s ease;
+}
+.development-notice.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.development-notice.hidden + .blurred {
+  filter: blur(0);
+}
+.notice-content {
+  background-color: white;
+  border-radius: 24px;
+  padding: 40px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+  z-index: 10000;
+}
+.development-notice.hidden .notice-content {
+  transform: translateY(50px);
+}
+.notice-content h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+.notice-content p {
+  font-size: 16px;
+  color: var(--gray);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.notice-button {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 980px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+.notice-button:hover {
+  background-color: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+/* Estilo para identificar las secciones oscuras (opcional, solo para JS) */
+.dark-section {
+  background-color: var(--dark); /* O el color oscuro que uses */
+  color: white; /* Asegurar contraste del texto dentro de la sección */
+}
+.dark-section .section-subtitle {
+    color: rgba(255, 255, 255, 0.7); /* Ajustar subtítulo en sección oscura */
+}
+/* Asegurar que los títulos de las tarjetas en secciones oscuras sean visibles */
+.dark-section .problem-card h3 {
+    color: white;
+}
+
+/* Hero Videos Section - Carrusel */
+.hero-videos-container {
+  margin-top: 60px;
+  animation: fadeUp 1s ease 0.4s both;
+}
+
+.video-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.video-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: var(--dark);
+  background: linear-gradient(90deg, var(--primary), var(--accent-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Video Carousel */
+.video-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-carousel-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  background: white;
+}
+
+.video-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.video-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.video-slide.prev {
+  transform: translateX(-100%);
+}
+
+.video-label {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px 16px;
+  border-radius: 20px;
+  z-index: 10;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+}
+
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 24px;
+}
+
+/* Video Indicators */
+.video-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.indicator {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 16px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+}
+
+.indicator:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.indicator.active {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 113, 227, 0.3);
+}
+
+.indicator-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.progress-bar {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.indicator.active .progress-bar {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design para Videos */
+@media (max-width: 768px) {
+  .video-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .video-carousel {
+    max-width: 100%;
+  }
+  
+  .video-label {
+    top: 15px;
+    left: 20px;
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  
+  .video-indicators {
+    gap: 15px;
+    margin-top: 25px;
+  }
+  
+  .indicator {
+    padding: 10px 20px;
+    min-width: 100px;
+  }
+  
+  .indicator-label {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-videos-container {
+    margin-top: 40px;
+  }
+  
+  .video-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .video-carousel-container {
+    border-radius: 16px;
+  }
+  
+  .video-slide {
+    border-radius: 16px;
+  }
+  
+  .video-wrapper {
+    border-radius: 16px;
+  }
+  
+  .video-wrapper iframe {
+    border-radius: 16px;
+  }
+  
+  .video-indicators {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .indicator {
+    padding: 8px 16px;
+    min-width: auto;
+  }
+}

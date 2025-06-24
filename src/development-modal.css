@@ -1,0 +1,252 @@
+:root {
+    --apple-blue: #0071e3;
+    --apple-gray: #86868b;
+    --apple-red: #ff2d55;
+    --apple-green: #34c759;
+    --apple-yellow: #ffcc00;
+    --apple-black: #1d1d1f;
+    --apple-purple: #5e5ce6;
+}
+
+#modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+#development-modal {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    text-align: center;
+    animation: slideIn 0.5s ease-out;
+    position: relative;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.construction-icon {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: var(--apple-yellow);
+    color: var(--apple-black);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.modal-header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--apple-black);
+}
+
+.modal-header h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--apple-gray);
+    margin-bottom: 20px;
+}
+
+.info-panels {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.info-panel {
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.info-panel i {
+    font-size: 20px;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+.info-panel p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--apple-black);
+}
+
+.contest-info {
+    background-color: rgba(0, 113, 227, 0.1);
+}
+
+.contest-info i {
+    color: var(--apple-blue);
+}
+
+.technical-info {
+    background-color: rgba(94, 92, 230, 0.1);
+}
+
+.technical-info i {
+    color: var(--apple-purple);
+}
+
+.device-compatibility {
+    margin-bottom: 20px;
+}
+
+.compatibility-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--apple-black);
+}
+
+.device-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.device-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon-container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.icon-container:hover {
+    transform: scale(1.05);
+}
+
+.icon-container i {
+    font-size: 24px;
+}
+
+.status-indicator {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.device-label {
+    font-size: 12px;
+    color: var(--apple-gray);
+}
+
+.phone-icon .icon-container {
+    background-color: rgba(255, 45, 85, 0.1);
+    color: var(--apple-red);
+}
+
+.phone-icon .status-indicator {
+    background-color: var(--apple-red);
+}
+
+.laptop-icon .icon-container {
+    background-color: rgba(255, 204, 0, 0.1);
+    color: var(--apple-yellow);
+}
+
+.laptop-icon .status-indicator {
+    background-color: var(--apple-yellow);
+}
+
+.desktop-icon .icon-container {
+    background-color: rgba(52, 199, 89, 0.1);
+    color: var(--apple-green);
+}
+
+.desktop-icon .status-indicator {
+    background-color: var(--apple-green);
+}
+
+#accept-button {
+    background-color: var(--apple-blue);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 15px;
+}
+
+#accept-button:hover {
+    background-color: #0062c3;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 113, 227, 0.3);
+}
+
+.credits {
+    font-size: 12px;
+    color: var(--apple-gray);
+    margin-top: 15px;
+}

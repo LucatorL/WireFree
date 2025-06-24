@@ -1,0 +1,249 @@
+/* Apple-Style Features Showcase */
+.features-showcase {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.features-showcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(0, 113, 227, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(52, 199, 89, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.features-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.features-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.features-subtitle {
+  font-size: 1.375rem;
+  color: #86868b;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+.feature-block {
+  margin-bottom: 160px;
+  position: relative;
+}
+
+.feature-block:last-child {
+  margin-bottom: 0;
+}
+
+.feature-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  min-height: 600px;
+}
+
+.feature-block.reverse .feature-content {
+  direction: rtl;
+}
+
+.feature-block.reverse .feature-text {
+  direction: ltr;
+}
+
+.feature-text {
+  padding: 40px 0;
+}
+
+.feature-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #007AFF, #5856D6);
+  color: white;
+  padding: 8px 16px;
+}
+
+.feature-heading {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  position: relative;
+}
+
+.validation-badge {
+  display: inline-block;
+  background: #34C759;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 12px;
+  margin-left: 16px;
+  vertical-align: middle;
+  text-transform: lowercase;
+  letter-spacing: 0;
+}
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.feature-heading {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.feature-description {
+  font-size: 1.25rem;
+  color: #424245;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.feature-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: #1d1d1f;
+  font-weight: 500;
+}
+
+.highlight-icon {
+  width: 1px;
+  height: 1px;
+  background: rgba(0, 122, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1000x;
+}
+.feature-media {
+  position: relative;
+  height: 500px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #000;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+  transform: scale(1);
+  transform-origin: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .features-showcase {
+    padding: 80px 0;
+  }
+  
+  .features-container {
+    padding: 0 24px;
+  }
+  
+  .feature-content {
+    gap: 60px;
+    min-height: 500px;
+  }
+  
+  .feature-block {
+    margin-bottom: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-showcase {
+    padding: 60px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 60px;
+  }
+  
+  .feature-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .feature-block.reverse .feature-content {
+    direction: ltr;
+  }
+  
+  .feature-media {
+    height: 300px;
+    order: -1;
+  }
+  
+  .feature-highlights {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .feature-block {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-container {
+    padding: 0 16px;
+  }
+  
+  .feature-media {
+    height: 250px;
+    border-radius: 16px;
+  }
+}
